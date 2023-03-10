@@ -3,5 +3,46 @@
 @media (min-width: 1440px) {
   .header {
     max-width: 1360px;
+
+    margin: 24px auto 70px auto;
+    padding: 0 40px;
+  }
+
+  .hero {
+    max-width: 1145px;
+
+    margin: auto;
+
+    flex-direction: row-reverse;
+  }
+
+  .hero-img-mobile {
+    display: none;
+  }
+
+  .hero-img-desktop {
+    display: flex;
+  }
+
+  .hero-article {
+    margin-top: 48px;
+
+    align-items: flex-start;
+  }
+
+  .hero-article-p {
+    width: 445px;
+
+    margin: 48px 0 51px 0;
+    text-align: left;
+  }
+
+  .hero-article-button {
+    width: 136px;
+    height: 48px;
+
+    color: var(--almost-white);
+    background-color: var(--almost-black);
+    border: none;
   }
 }

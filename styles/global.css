@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Epilogue";
 }
 
 :root {
@@ -16,5 +18,36 @@
   --pure-white: #fff;
 }
 
-/* @media (min-width: 1440px) {
-} */
+h1 {
+  color: var(--almost-black);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+p {
+  color: var(--medium-grey);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 15px;
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    width: 540px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
