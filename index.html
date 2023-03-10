@@ -25,12 +25,48 @@
 
   <body>
     <header class="header">
-      <img class="header-logo" src="./assets/logo.svg" alt="snap logo" />
-      <img
-        class="header-hamburger"
-        src="./assets/icon-menu.svg"
-        alt="menu icon"
-      />
+      <div class="left-nav">
+        <figure class="header-logo-container">
+          <img class="header-logo" src="./assets/logo.svg" alt="snap logo" />
+        </figure>
+        <nav class="header-menu">
+          <ul class="header-menu-links">
+            <li class="header-link">
+              Features
+              <img
+                src="./assets/icon-arrow-down.svg"
+                alt="arrow icon pointing down"
+              />
+            </li>
+            <li class="header-link">
+              Company
+              <img
+                src="./assets/icon-arrow-down.svg"
+                alt="arrow icon pointing down"
+              />
+            </li>
+            <li class="header-link">Careers</li>
+            <li class="header-link">About</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-nav">
+        <nav class="header-login">
+          <ul class="header-menu-login">
+            <li class="header-link">Login</li>
+            <li class="header-register">
+              <button class="header-register-button">Register</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <figure class="header-hamburger-container">
+        <img
+          class="header-hamburger"
+          src="./assets/icon-menu.svg"
+          alt="menu icon"
+        />
+      </figure>
     </header>
     <main>
       <section class="hero">

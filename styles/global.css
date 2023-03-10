@@ -18,6 +18,17 @@
   --pure-white: #fff;
 }
 
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  color: var(--medium-grey);
+  font-size: 14px;
+  line-height: 16px;
+}
+
 h1 {
   color: var(--almost-black);
   font-size: 36px;

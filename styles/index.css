@@ -8,6 +8,14 @@
   justify-content: space-between;
 }
 
+.header-menu-links {
+  display: none;
+}
+
+.right-nav {
+  display: none;
+}
+
 .hero {
   width: 100vw;
   display: flex;

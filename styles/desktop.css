@@ -2,10 +2,50 @@
 
 @media (min-width: 1440px) {
   .header {
-    max-width: 1360px;
+    max-width: unset;
 
     margin: 24px auto 70px auto;
     padding: 0 40px;
+  }
+
+  .left-nav {
+    display: flex;
+  }
+
+  .right-nav {
+    display: flex;
+  }
+
+  .header-logo {
+    margin-right: 60px;
+  }
+
+  .header-menu {
+    display: flex;
+  }
+
+  .header-menu-links,
+  .header-menu-login {
+    display: flex;
+    gap: 40px;
+
+    list-style-type: none;
+  }
+
+  .header-hamburger {
+    display: none;
+  }
+
+  .header-register-button {
+    width: 104px;
+    height: 42px;
+
+    background-color: var(--pure-white);
+    border: 1px solid var(--medium-grey);
+    color: var(--medium-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
   }
 
   .hero {
