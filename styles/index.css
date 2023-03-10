@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-.hero-img-mobile-container {
+.hero-img-container {
   margin: auto;
   overflow: hidden;
 }
@@ -54,4 +54,31 @@
   color: var(--almost-white);
   background-color: var(--almost-black);
   border: none;
+}
+
+.clients {
+  width: 343px;
+  margin: 48px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-logo-databiz {
+  width: 81px;
+  height: 14px;
+}
+
+.client-logo-audiophile {
+  width: 53px;
+  height: 26px;
+}
+
+.client-logo-meet {
+  width: 64px;
+  height: 14px;
+}
+
+.client-logo-maker {
+  width: 59px;
+  height: 17px;
 }
