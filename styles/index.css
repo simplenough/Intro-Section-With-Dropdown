@@ -137,6 +137,12 @@
   border: none;
 }
 
+.hero-article-button:hover {
+  color: var(--almost-black);
+  background-color: var(--pure-white);
+  border: 1px solid var(--almost-black);
+}
+
 .clients {
   width: 343px;
   margin: 48px auto;
