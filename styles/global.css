@@ -18,7 +18,9 @@
   --pure-white: #fff;
 }
 
-li {
+li,
+a,
+.mobile-register-button {
   display: flex;
   align-items: center;
   justify-content: center;
