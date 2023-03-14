@@ -1,3 +1,7 @@
+.mobile-drawer {
+  display: none;
+}
+
 .mobile-menu-container {
   width: 240px;
   height: 100vh;

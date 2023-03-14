@@ -24,52 +24,55 @@
   </head>
 
   <body>
-    <div class="mobile-menu-container">
-      <figure>
-        <img
-          class="mobile-menu-close"
-          src="./assets/icon-close-menu.svg"
-          alt="close icon"
-        />
-      </figure>
-      <menu class="mobile-menu">
-        <li class="mobile-menu-links">
-          Features
-          <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
-        </li>
-        <menu class="mobile-sub-menu">
+    <nav class="mobile-drawer" id="drawer">
+      <div class="mobile-menu-container">
+        <figure id="close">
+          <img
+            class="mobile-menu-close"
+            src="./assets/icon-close-menu.svg"
+            alt="close icon"
+          />
+        </figure>
+        <menu class="mobile-menu">
           <li class="mobile-menu-links">
-            <img src="./assets/icon-todo.svg" alt="list icon" /> Todo List
+            Features
+            <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
           </li>
+          <menu class="mobile-sub-menu">
+            <li class="mobile-menu-links">
+              <img src="./assets/icon-todo.svg" alt="list icon" /> Todo List
+            </li>
+            <li class="mobile-menu-links">
+              <img src="./assets/icon-calendar.svg" alt="calendar icon" />
+              Calendar
+            </li>
+            <li class="mobile-menu-links">
+              <img src="./assets/icon-reminders.svg" alt="bell icon" />
+              Reminders
+            </li>
+            <li class="mobile-menu-links">
+              <img src="./assets/icon-planning.svg" alt="clock icon" /> Planning
+            </li>
+          </menu>
           <li class="mobile-menu-links">
-            <img src="./assets/icon-calendar.svg" alt="calendar icon" />
-            Calendar
+            Company
+            <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
           </li>
-          <li class="mobile-menu-links">
-            <img src="./assets/icon-reminders.svg" alt="bell icon" /> Reminders
-          </li>
-          <li class="mobile-menu-links">
-            <img src="./assets/icon-planning.svg" alt="clock icon" /> Planning
-          </li>
+          <menu class="mobile-sub-menu">
+            <li class="mobile-menu-links">History</li>
+            <li class="mobile-menu-links">Our Team</li>
+            <li class="mobile-menu-links">Blog</li>
+          </menu>
+          <li class="mobile-menu-links">Careers</li>
+          <li class="mobile-menu-links">About</li>
         </menu>
-        <li class="mobile-menu-links">
-          Company
-          <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
-        </li>
-        <menu class="mobile-sub-menu">
-          <li class="mobile-menu-links">History</li>
-          <li class="mobile-menu-links">Our Team</li>
-          <li class="mobile-menu-links">Blog</li>
-        </menu>
-        <li class="mobile-menu-links">Careers</li>
-        <li class="mobile-menu-links">About</li>
-      </menu>
-      <div class="mobile-menu-buttons">
-        <a class="login-link">Login</a>
-        <button class="mobile-register-button">Register</button>
+        <div class="mobile-menu-buttons">
+          <a class="login-link">Login</a>
+          <button class="mobile-register-button">Register</button>
+        </div>
       </div>
-    </div>
-    <div class="mobile-menu-overlay"></div>
+      <div class="mobile-menu-overlay"></div>
+    </nav>
     <header class="header">
       <div class="left-nav">
         <figure class="header-logo-container">
@@ -105,7 +108,7 @@
             </li>
           </menu>
         </nav>
-        <figure class="header-hamburger-container">
+        <figure class="header-hamburger-container" id="hamburger">
           <img
             class="header-hamburger"
             src="./assets/icon-menu.svg"
@@ -160,5 +163,16 @@
         </article>
       </section>
     </main>
+    <script>
+      // *objective: display drawer when hamburger is clicked
+      // --event listener on hamburger
+      // --on click, drawer displays
+      // --get drawer
+      {
+      }
+      // *objective: hide drawer when close button is clicked
+      // --event listener on close button
+      // --on click, hide drawer
+    </script>
   </body>
 </html>
