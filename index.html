@@ -172,7 +172,13 @@
         drawer = document.getElementById("drawer"),
         close = document.getElementById("close");
 
-      hamburger.addEventListener("click", () => {});
+      hamburger.addEventListener("click", () => {
+        drawer.style.display = "flex";
+      });
+
+      close.addEventListener("click", () => {
+        drawer.style.display = "none";
+      });
 
       // *objective: hide drawer when close button is clicked
       // --event listener on close button
