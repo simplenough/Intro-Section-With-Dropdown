@@ -34,7 +34,7 @@
 .mobile-sub-menu {
   margin-left: 24px;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 16px;
 }

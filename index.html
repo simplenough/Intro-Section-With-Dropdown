@@ -34,11 +34,15 @@
           />
         </figure>
         <menu class="mobile-menu">
-          <li class="mobile-menu-links">
+          <li class="mobile-menu-links" id="feature">
             Features
-            <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
+            <img
+              src="./assets/icon-arrow-up.svg"
+              id="featureArrow"
+              alt="arrow pointing up"
+            />
           </li>
-          <menu class="mobile-sub-menu">
+          <menu class="mobile-sub-menu" id="featureSubMenu">
             <li class="mobile-menu-links">
               <img src="./assets/icon-todo.svg" alt="list icon" /> Todo List
             </li>
@@ -54,11 +58,15 @@
               <img src="./assets/icon-planning.svg" alt="clock icon" /> Planning
             </li>
           </menu>
-          <li class="mobile-menu-links">
+          <li class="mobile-menu-links" id="company">
             Company
-            <img src="./assets/icon-arrow-up.svg" alt="arrow pointing up" />
+            <img
+              src="./assets/icon-arrow-up.svg"
+              id="companyArrow"
+              alt="arrow pointing up"
+            />
           </li>
-          <menu class="mobile-sub-menu">
+          <menu class="mobile-sub-menu" id="companySubMenu">
             <li class="mobile-menu-links">History</li>
             <li class="mobile-menu-links">Our Team</li>
             <li class="mobile-menu-links">Blog</li>
@@ -168,6 +176,10 @@
       // --event listener on hamburger
       // --on click, drawer displays
       // --get drawer
+      // *objective: hide drawer when close button is clicked
+      // --event listener on close button
+      // --on click, hide drawer
+
       let hamburger = document.getElementById("hamburger"),
         drawer = document.getElementById("drawer"),
         close = document.getElementById("close");
@@ -180,9 +192,20 @@
         drawer.style.display = "none";
       });
 
-      // *objective: hide drawer when close button is clicked
-      // --event listener on close button
-      // --on click, hide drawer
+      // *objective: display mobile sub menus when corresponding links are clicked
+      // --event listener on features and company
+      // --on click, sub menu displays
+      // --on click, arrow flips
+      let feature = document.getElementById("feature"),
+        featureSubMenu = doc.getElementById("featureSubMenu"),
+        featureArrow = document.getElementById("featureArrow"),
+        company = document.getElementById("company"),
+        companySubMenu = doc.getElementById("companySubMenu");
+      companyArrow = document.getElementById("companyArrow");
+
+      feature.addEventListener("click", () => {
+        featureSubMenu.style.display = "flex";
+      });
     </script>
   </body>
 </html>
