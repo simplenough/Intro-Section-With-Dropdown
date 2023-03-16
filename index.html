@@ -34,14 +34,14 @@
           />
         </figure>
         <menu class="mobile-menu">
-          <li class="mobile-menu-links" id="feature">
+          <a class="mobile-menu-links" id="feature">
             Features
             <img
-              src="./assets/icon-arrow-up.svg"
+              src="./assets/icon-arrow-down.svg"
               id="featureArrow"
-              alt="arrow pointing up"
+              alt="arrow pointing down"
             />
-          </li>
+          </a>
           <menu class="mobile-sub-menu" id="featureSubMenu">
             <li class="mobile-menu-links">
               <img src="./assets/icon-todo.svg" alt="list icon" /> Todo List
@@ -61,9 +61,9 @@
           <li class="mobile-menu-links" id="company">
             Company
             <img
-              src="./assets/icon-arrow-up.svg"
+              src="./assets/icon-arrow-down.svg"
               id="companyArrow"
-              alt="arrow pointing up"
+              alt="arrow pointing down"
             />
           </li>
           <menu class="mobile-sub-menu" id="companySubMenu">
@@ -197,10 +197,10 @@
       // --on click, sub menu displays
       // --on click, arrow flips
       let feature = document.getElementById("feature"),
-        featureSubMenu = doc.getElementById("featureSubMenu"),
+        featureSubMenu = document.getElementById("featureSubMenu"),
         featureArrow = document.getElementById("featureArrow"),
         company = document.getElementById("company"),
-        companySubMenu = doc.getElementById("companySubMenu");
+        companySubMenu = document.getElementById("companySubMenu");
       companyArrow = document.getElementById("companyArrow");
 
       feature.addEventListener("click", () => {
