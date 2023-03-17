@@ -174,3 +174,7 @@
   width: 59px;
   height: 17px;
 }
+
+.flip {
+  transform: rotate(180deg);
+}

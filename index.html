@@ -205,7 +205,17 @@
 
       feature.addEventListener("click", () => {
         featureSubMenu.style.display = "flex";
+        featureArrow.classList.toggle("flip");
       });
+
+      company.addEventListener("click", () => {
+        companySubMenu.style.display = "flex";
+        companyArrow.classList.toggle("flip");
+      });
+
+      // if feature is clicked, display sub menu
+      // else, don't display
+      // if clicked again, hide sub menu
     </script>
   </body>
 </html>
