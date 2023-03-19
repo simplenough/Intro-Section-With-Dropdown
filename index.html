@@ -203,28 +203,13 @@
         companySubMenu = document.getElementById("companySubMenu"),
         companyArrow = document.getElementById("companyArrow");
 
-      let isFeatureSubMenuOpen = false;
-
-      function toggleFeatureSubMenu() {
-        if (isFeatureSubMenuOpen) {
-          // Close submenu
-          featureSubMenu.style.display = "none";
-          featureArrow.classList.toggle("flip");
-
-          isFeatureSubMenuOpen = false;
-        } else {
-          // Open submenu
-          featureSubMenu.style.display = "flex";
-          featureArrow.classList.toggle("flip");
-
-          isFeatureSubMenuOpen = true;
-        }
-      }
-
-      featureElement.addEventListener("click", toggleFeatureSubMenu);
+      featureElement.addEventListener("click", () => {
+        featureSubMenu.classList.toggle("open");
+        featureArrow.classList.toggle("flip");
+      });
 
       companyElement.addEventListener("click", () => {
-        companySubMenu.style.display = "flex";
+        companySubMenu.classList.toggle("open");
         companyArrow.classList.toggle("flip");
       });
 
