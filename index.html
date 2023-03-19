@@ -196,19 +196,34 @@
       // --event listener on features and company
       // --on click, sub menu displays
       // --on click, arrow flips
-      let feature = document.getElementById("feature"),
+      let featureElement = document.getElementById("feature"),
         featureSubMenu = document.getElementById("featureSubMenu"),
         featureArrow = document.getElementById("featureArrow"),
-        company = document.getElementById("company"),
+        companyElement = document.getElementById("company"),
         companySubMenu = document.getElementById("companySubMenu"),
         companyArrow = document.getElementById("companyArrow");
 
-      feature.addEventListener("click", () => {
-        featureSubMenu.style.display = "flex";
-        featureArrow.classList.toggle("flip");
-      });
+      let isFeatureSubMenuOpen = false;
 
-      company.addEventListener("click", () => {
+      function toggleFeatureSubMenu() {
+        if (isFeatureSubMenuOpen) {
+          // Close submenu
+          featureSubMenu.style.display = "none";
+          featureArrow.classList.toggle("flip");
+
+          isFeatureSubMenuOpen = false;
+        } else {
+          // Open submenu
+          featureSubMenu.style.display = "flex";
+          featureArrow.classList.toggle("flip");
+
+          isFeatureSubMenuOpen = true;
+        }
+      }
+
+      featureElement.addEventListener("click", toggleFeatureSubMenu);
+
+      companyElement.addEventListener("click", () => {
         companySubMenu.style.display = "flex";
         companyArrow.classList.toggle("flip");
       });
