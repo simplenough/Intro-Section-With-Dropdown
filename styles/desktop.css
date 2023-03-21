@@ -1,6 +1,43 @@
 @import url(./index.css);
 
 @media (min-width: 1440px) {
+  .drawer {
+    display: flex;
+  }
+
+  .mobile-menu-container {
+    width: 100vw;
+    height: 42px;
+
+    margin-right: 40px;
+    margin: 20px 40px 0 187px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .mobile-menu-overlay,
+  .mobile-menu-close {
+    display: none;
+  }
+
+  .mobile-menu {
+    margin: 0 720px 0 0;
+
+    flex-direction: row;
+  }
+
+  .mobile-menu-buttons {
+    margin-top: 0;
+
+    flex-direction: row;
+  }
+
+  .mobile-register-button {
+    width: 104px;
+  }
+
   .header {
     max-width: unset;
 
