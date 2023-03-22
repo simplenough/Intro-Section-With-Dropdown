@@ -1,6 +1,72 @@
 @import url(./index.css);
 
 @media (min-width: 1440px) {
+  .drawer {
+    display: flex;
+  }
+
+  .mobile-menu-container {
+    width: 100vw;
+    height: 42px;
+
+    margin-right: 40px;
+    margin: 20px 40px 0 187px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .mobile-menu-overlay,
+  .mobile-menu-close {
+    display: none;
+  }
+
+  .mobile-menu {
+    margin: 0 720px 0 0;
+
+    flex-direction: row;
+  }
+
+  .mobile-menu-buttons {
+    margin-top: 0;
+
+    flex-direction: row;
+  }
+
+  .mobile-sub-menu {
+    position: absolute;
+  }
+
+  #featureSubMenu,
+  #companySubMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--pure-white);
+    border: solid black 2px;
+    border-radius: 10px;
+  }
+
+  #featureSubMenu {
+    width: 153px;
+    height: 160px;
+
+    margin: 30px 0 0 -80px;
+  }
+
+  #companySubMenu {
+    width: 116px;
+    height: 128px;
+
+    margin: 30px 0 0 100px;
+  }
+
+  .mobile-register-button {
+    width: 104px;
+  }
+
   .header {
     max-width: unset;
 
