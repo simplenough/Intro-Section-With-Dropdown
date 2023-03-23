@@ -27,7 +27,8 @@
   gap: 24px;
 }
 
-.menu-links {
+.menu-links,
+.sub-menu-links {
   justify-content: flex-start;
 }
 
