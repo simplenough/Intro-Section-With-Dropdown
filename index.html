@@ -186,21 +186,41 @@
       // if clicked again, hide sub menu
 
       featureElement.addEventListener("mouseenter", () => {
+        featureArrow.style.transform = "rotate(180deg)";
         featureSubMenu.style.display = "flex";
         companySubMenu.style.display = "none";
       });
 
+      featureElement.addEventListener("mouseleave", () => {
+        featureArrow.style.transform = "rotate(360deg)";
+      });
+
+      featureSubMenu.addEventListener("mouseenter", () => {
+        featureArrow.style.transform = "rotate(180deg)";
+      });
+
       featureSubMenu.addEventListener("mouseleave", () => {
         featureSubMenu.style.display = "none";
+        featureArrow.style.transform = "rotate(360deg)";
       });
 
       companyElement.addEventListener("mouseenter", () => {
+        companyArrow.style.transform = "rotate(180deg)";
         companySubMenu.style.display = "flex";
         featureSubMenu.style.display = "none";
       });
 
+      companyElement.addEventListener("mouseleave", () => {
+        companyArrow.style.transform = "rotate(360deg)";
+      });
+
+      companySubMenu.addEventListener("mouseenter", () => {
+        companyArrow.style.transform = "rotate(180deg)";
+      });
+
       companySubMenu.addEventListener("mouseleave", () => {
         companySubMenu.style.display = "none";
+        companyArrow.style.transform = "rotate(360deg)";
       });
     </script>
   </body>
