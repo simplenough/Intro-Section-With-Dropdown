@@ -55,8 +55,13 @@
   height: 42px;
 
   background-color: var(--pure-white);
-  border: 1px solid var(--almost-black);
+  border: 1px solid var(--light-grey);
+  border-radius: 15px;
   font-weight: 400;
+}
+
+.register-button:hover {
+  border: 1.5px solid var(--black);
 }
 
 .menu-overlay {
@@ -82,14 +87,9 @@
 }
 
 .header-logo-container {
-  z-index: 5;
-}
+  width: 84px;
+  height: 27px;
 
-.header-menu-links {
-  display: none;
-}
-
-.header-logo-container {
   z-index: 5;
 }
 

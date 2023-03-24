@@ -76,7 +76,7 @@
         </menu>
         <div class="menu-buttons">
           <a class="login-link">Login</a>
-          <button class="register-button">Register</button>
+          <a class="register-button">Register</a>
         </div>
       </div>
       <div class="menu-overlay"></div>
@@ -184,6 +184,24 @@
       // if feature is clicked, display sub menu
       // else, don't display
       // if clicked again, hide sub menu
+
+      featureElement.addEventListener("mouseenter", () => {
+        featureSubMenu.style.display = "flex";
+        companySubMenu.style.display = "none";
+      });
+
+      featureSubMenu.addEventListener("mouseleave", () => {
+        featureSubMenu.style.display = "none";
+      });
+
+      companyElement.addEventListener("mouseenter", () => {
+        companySubMenu.style.display = "flex";
+        featureSubMenu.style.display = "none";
+      });
+
+      companySubMenu.addEventListener("mouseleave", () => {
+        companySubMenu.style.display = "none";
+      });
     </script>
   </body>
 </html>
