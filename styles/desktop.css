@@ -28,6 +28,10 @@
     flex-direction: row;
   }
 
+  #feature {
+    padding: 15px 0;
+  }
+
   .menu-buttons {
     margin-top: 0;
 
@@ -53,14 +57,22 @@
     width: 153px;
     height: 160px;
 
-    margin: 30px 0 0 -80px;
+    margin: 40px 0 0 -80px;
+
+    align-items: flex-start;
   }
 
   #companySubMenu {
     width: 116px;
     height: 128px;
 
-    margin: 30px 0 0 100px;
+    margin: 40px 0 0 100px;
+
+    align-items: flex-start;
+  }
+
+  .sub-menu-links {
+    margin-left: 25px;
   }
 
   .register-button {

@@ -19,6 +19,10 @@
   float: right;
 }
 
+.arrow-icon {
+  stroke: var(--medium-grey);
+}
+
 .menu {
   margin: 78px 0 0 24px;
 

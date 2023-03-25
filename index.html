@@ -36,11 +36,20 @@
         <menu class="menu">
           <a class="menu-links" id="feature">
             Features
-            <img
+            <svg
+              class="arrow-icon"
+              id="featureArrow"
+              width="10"
+              height="6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
+            </svg>
+            <!-- <img
               src="./assets/icon-arrow-down.svg"
               id="featureArrow"
               alt="arrow pointing down"
-            />
+            /> -->
           </a>
           <menu class="sub-menu" id="featureSubMenu">
             <a class="sub-menu-links">
@@ -60,11 +69,20 @@
           </menu>
           <a class="menu-links" id="company">
             Company
-            <img
+            <svg
+              class="arrow-icon"
+              id="companyArrow"
+              width="10"
+              height="6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
+            </svg>
+            <!-- <img
               src="./assets/icon-arrow-down.svg"
               id="companyArrow"
               alt="arrow pointing down"
-            />
+            /> -->
           </a>
           <menu class="sub-menu" id="companySubMenu">
             <a class="sub-menu-links">History</a>
@@ -187,16 +205,19 @@
 
       featureElement.addEventListener("mouseenter", () => {
         featureArrow.style.transform = "rotate(180deg)";
+        featureArrow.style.stroke = "var(--black)";
         featureSubMenu.style.display = "flex";
-        companySubMenu.style.display = "none";
       });
 
       featureElement.addEventListener("mouseleave", () => {
         featureArrow.style.transform = "rotate(360deg)";
+        featureArrow.style.stroke = "var(--medium-grey)";
+        featureSubMenu.style.display = "none";
       });
 
       featureSubMenu.addEventListener("mouseenter", () => {
         featureArrow.style.transform = "rotate(180deg)";
+        featureSubMenu.style.display = "flex";
       });
 
       featureSubMenu.addEventListener("mouseleave", () => {
@@ -206,16 +227,19 @@
 
       companyElement.addEventListener("mouseenter", () => {
         companyArrow.style.transform = "rotate(180deg)";
+        companyArrow.style.stroke = "var(--black)";
         companySubMenu.style.display = "flex";
-        featureSubMenu.style.display = "none";
       });
 
       companyElement.addEventListener("mouseleave", () => {
         companyArrow.style.transform = "rotate(360deg)";
+        companyArrow.style.stroke = "var(--medium-grey)";
+        companySubMenu.style.display = "none";
       });
 
       companySubMenu.addEventListener("mouseenter", () => {
         companyArrow.style.transform = "rotate(180deg)";
+        companySubMenu.style.display = "flex";
       });
 
       companySubMenu.addEventListener("mouseleave", () => {
