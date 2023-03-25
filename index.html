@@ -167,7 +167,7 @@
       // --on click, arrow flips
 
       class Component {
-        construct(elementId) {
+        constructor(elementId) {
           this.element = document.getElementById(elementId);
         }
 
@@ -176,7 +176,7 @@
         }
 
         display(style) {
-          this.element.style.transform = style;
+          this.element.style.display = style;
         }
 
         event(nameOfEvent, callback) {
@@ -211,14 +211,14 @@
       // if clicked again, hide sub menu
 
       Feat.event("mouseenter", () => {
-        Feat.transform("rotate(180deg)");
+        FeatArrow.transform("rotate(180deg)");
         Feat.display("flex");
         Company.display("none");
       })
       Feat.event("mouseleave", () => {
         Feat.transform("rotate(360deg)");
       })
-      FeatSubMenu.addEventListener("mouseenter", () => {
+      FeatSubMenu.event("mouseenter", () => {
         FeatArrow.transform("rotate(180deg)");
       });
       FeatSubMenu.event("mouseleave", () => {
@@ -228,7 +228,7 @@
 
       Company.event("mouseenter", () => {
         CompanyArrow.transform("rotate(180deg)");
-        CompanySubMenu.display(= "flex");
+        CompanySubMenu.display("flex");
         FeatSubMenu.display("none");
       });
       Company.event("mouseleave", () => {
