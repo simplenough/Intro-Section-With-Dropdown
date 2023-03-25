@@ -148,6 +148,7 @@
       // --event listener on close button
       // --on click, hide drawer
 
+      // TODO better names
       let hamburger = document.getElementById("hamburger"),
         drawer = document.getElementById("drawer"),
         close = document.getElementById("close");
@@ -164,63 +165,81 @@
       // --event listener on features and company
       // --on click, sub menu displays
       // --on click, arrow flips
-      let featureElement = document.getElementById("feature"),
-        featureSubMenu = document.getElementById("featureSubMenu"),
-        featureArrow = document.getElementById("featureArrow"),
-        companyElement = document.getElementById("company"),
-        companySubMenu = document.getElementById("companySubMenu"),
-        companyArrow = document.getElementById("companyArrow");
 
-      featureElement.addEventListener("click", () => {
-        featureSubMenu.classList.toggle("open");
-        featureArrow.classList.toggle("flip");
+      class Component {
+        construct(elementId) {
+          this.element = document.getElementById(elementId);
+        }
+
+        transform(style) {
+          this.element.style.transform = style;
+        }
+
+        display(style) {
+          this.element.style.transform = style;
+        }
+
+        event(nameOfEvent, callback) {
+          this.element.addEventListener(nameOfEvent, callback);
+        }
+        
+        toggleClass(className) {
+          this.element.classList.toggle(className);
+        }
+      };
+
+      let Feat = new Component("feature");
+      let FeatSubMenu = new Component("featureSubMenu");
+      let FeatArrow = new Component("featureArrow");
+      
+      let Company = new Component("company");
+      let CompanySubMenu = new Component("companySubMenu");
+      let CompanyArrow = new Component("companyArrow");
+
+      Feat.event("click", () => {
+        FeatSubMenu.toggleClass("open");
+        FeatArrow.toggleClass("flip");
       });
 
-      companyElement.addEventListener("click", () => {
-        companySubMenu.classList.toggle("open");
-        companyArrow.classList.toggle("flip");
+      Company.event("click", () => {
+        CompanySubMenu.toggleClass("open");
+        CompanyArrow.toggleClass("flip");
       });
-
+     
       // if feature is clicked, display sub menu
       // else, don't display
       // if clicked again, hide sub menu
 
-      featureElement.addEventListener("mouseenter", () => {
-        featureArrow.style.transform = "rotate(180deg)";
-        featureSubMenu.style.display = "flex";
-        companySubMenu.style.display = "none";
+      Feat.event("mouseenter", () => {
+        Feat.transform("rotate(180deg)");
+        Feat.display("flex");
+        Company.display("none");
+      })
+      Feat.event("mouseleave", () => {
+        Feat.transform("rotate(360deg)");
+      })
+      FeatSubMenu.addEventListener("mouseenter", () => {
+        FeatArrow.transform("rotate(180deg)");
+      });
+      FeatSubMenu.event("mouseleave", () => {
+        FeatSubMenu.display("none");
+        FeatArrow.transform("rotate(360deg)");
       });
 
-      featureElement.addEventListener("mouseleave", () => {
-        featureArrow.style.transform = "rotate(360deg)";
+      Company.event("mouseenter", () => {
+        CompanyArrow.transform("rotate(180deg)");
+        CompanySubMenu.display(= "flex");
+        FeatSubMenu.display("none");
       });
-
-      featureSubMenu.addEventListener("mouseenter", () => {
-        featureArrow.style.transform = "rotate(180deg)";
+      Company.event("mouseleave", () => {
+        CompanyArrow.transform("rotate(360deg)");
       });
-
-      featureSubMenu.addEventListener("mouseleave", () => {
-        featureSubMenu.style.display = "none";
-        featureArrow.style.transform = "rotate(360deg)";
+      CompanySubMenu.event("mouseenter", () => {
+        CompanyArrow.transform("rotate(180deg)");
       });
-
-      companyElement.addEventListener("mouseenter", () => {
-        companyArrow.style.transform = "rotate(180deg)";
-        companySubMenu.style.display = "flex";
-        featureSubMenu.style.display = "none";
-      });
-
-      companyElement.addEventListener("mouseleave", () => {
-        companyArrow.style.transform = "rotate(360deg)";
-      });
-
-      companySubMenu.addEventListener("mouseenter", () => {
-        companyArrow.style.transform = "rotate(180deg)";
-      });
-
-      companySubMenu.addEventListener("mouseleave", () => {
-        companySubMenu.style.display = "none";
-        companyArrow.style.transform = "rotate(360deg)";
+      CompanySubMenu.event("mouseleave", () => {
+        CompanySubMenu.display("none");
+        CompanyArrow.transform("rotate(360deg)");
       });
     </script>
   </body>
