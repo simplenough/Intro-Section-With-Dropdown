@@ -59,7 +59,7 @@
 
     margin: 40px 0 0 -80px;
 
-    align-items: flex-start;
+    align-items: center;
   }
 
   #companySubMenu {
@@ -153,6 +153,10 @@
   .hero-article-button {
     width: 136px;
     height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     color: var(--almost-white);
     background-color: var(--almost-black);
